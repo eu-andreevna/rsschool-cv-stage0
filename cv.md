@@ -40,7 +40,8 @@ schemeSvg.addEventListener('click', (event) => {
 ## Education
 
 - **University:** Moscow Aviation Institute
-- **Course:** Marathon from "HTML Academy", FreeCodeCamp
+- **Course:** Marathon from [HTML Academy] (https://htmlacademy.ru
+  ), [FreeCodeCamp] (https://www.freecodecamp.org/)
 
 ## English
 
