@@ -208,7 +208,7 @@ p {
     }
 }
 
-@media (max-width: 656px) {
+@media (max-width: 680px) {
     .nav-list {
         display: flex;
         flex-direction: column;
@@ -216,7 +216,7 @@ p {
     }
 }
 
-@media (max-width: 573px) {
+@media (max-width: 590px) {
     .section-name .section-title::before {
         top: 100px;
         width: 200px;
