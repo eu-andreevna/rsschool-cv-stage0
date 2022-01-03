@@ -14,14 +14,25 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Tenor Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.3;
+    background-color: #f9faf5;
     color: #4a423c;
 }
 
+p {
+    margin: 0;
+}
+
+.header,
+.footer {
+    background-color: #d0c9bf;
+}
+
 .list {
-    list-style: none;
+    margin: 0;
     padding-left: 0;
+    list-style: none;
 }
 
 .nav-list {
@@ -55,13 +66,24 @@ body {
 .main-container { 
   display: flex; /* Свойство размещает секции по горизонтали */
   flex-wrap: wrap; /* Секции, которые не помещаются по ширине переносятся на новую строку */
+  justify-content: space-between;
 }
 
 .section {
-  width: 50%;  /* Каждая секция занимает ровно половину ширины контейнера */
+  width: calc(50% - 20px);  /* Каждая секция занимает ровно половину ширины контейнера */
+  margin: 20px 0;
+  padding-left: 10px;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.section:nth-child(-n+5) {
+  border-bottom: 1px solid #4a423c;
 }
 
 .section-title {
+    margin: 0;
+    padding-bottom: 20px;
     font-size: 20px;
 }
 
@@ -81,8 +103,122 @@ body {
     border-radius: 50%;
 }
 
-@media (max-width: 768px) {
-  .section {
+.section-profile {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 50px 0;
     width: 100%;
-  }
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 15px solid #4a423c;
+}
+
+.section-name {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-name .section-title {
+    position: relative;
+    font-size: 33px;
+}
+
+.section-name .section-title::before {
+    content: "";
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50px;
+    width: 300px;
+    height: 2px;
+    background: #4a423c;
+}
+
+.avatar-img {
+    border-radius: 100%;
+}
+
+.contacts-item {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+.contacts-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    color: #4a423c;
+}
+
+.contacts-item:nth-child(1)::before {
+    background-image: url(asset/svg/location.svg);
+}
+
+.contacts-item:nth-child(2)::before {
+    background-image: url(asset/svg/email.svg);
+}
+
+.contacts-item:nth-child(3)::before {
+    background-image: url(asset/svg/github.svg);
+}
+
+.contacts-item:nth-child(4)::before {
+    background-image: url(asset/svg/discord.svg);
+}
+
+.contacts-item:nth-child(5)::before {
+    background-image: url(asset/svg/telegram.svg);
+}
+
+.pre-code {
+    margin: 0;
+    background-color: #cbcccb;
+}
+
+#education p {
+    padding-bottom: 15px;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 0 10px;
+    }
+    
+    .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .section:nth-child(-n+6) {
+        border-bottom: 1px solid #4a423c;
+    }
+}
+
+@media (max-width: 656px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 573px) {
+    .section-name .section-title::before {
+        top: 100px;
+        width: 200px;
+    }
 }

@@ -14,16 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
 </head>
 <body class="body">
-    <!-- <div class="wrap"> -->
         <header class="header">
             <div class="container">
                 <div class="nav">
                     <ul class="list nav-list">
+                        <li class="nav-item"><a class="link nav-link" href="#contacts">Contacts</a></li>
                         <li class="nav-item"><a class="link nav-link" href="#summary">About me</a></li>
                         <li class="nav-item"><a class="link nav-link" href="#code">Code example</a></li>
                         <li class="nav-item"><a class="link nav-link" href="#education">Education</a></li>
                         <li class="nav-item"><a class="link nav-link" href="#languages">My languages</a></li>
-                        <li class="nav-item"><a class="link nav-link" href="#contacts">Contacts</a></li>
                         <li class="nav-item"><a class="link nav-link" href="#skills">Skills</a></li>
                     </ul>
                 </div>
@@ -31,31 +30,53 @@
         </header>
         <main class="main">
             <div class="container main-container">
-                <!-- <div class="column left-column"> -->
-                    <section class="section" id="profile">
-                        <h1 class="section-title">Eugenia Mamarina</h1>
-                        <h3 class="section-subtitle">Future fronted-developer</h3>
-                        <img class="avatar-img" src="asset/img/Pryd8S-aRjY.jpg" alt="my-avatar" width="210" height="280">
+                    <section class="section-profile" id="profile">
+                        <img class="avatar-img" src="asset/img/3o6g2msVPtM.jpg" alt="my-avatar" width="200" height="200">
+                        <div class="section-name">
+                            <h1 class="section-title">Eugenia Mamarina</h1>
+                            <h3 class="section-subtitle">Future fronted-developer</h3>
+                        </div>
+                    </section>
+                    <section class="section" id="contacts">
+                        <h2 class="section-title">Contacts</h2>
+                        <ul class="list">
+                            <li class="contacts-item">
+                                Moscow, Russia
+                            </li>
+                            <li class="contacts-item">
+                                <a class="link" href="mailto:eu.mamarina2014@yandex.ru">eu.mamarina2014@yandex.ru</a>
+                            </li>
+                            <li class="contacts-item">
+                                <a class="link" href="https://github.com/eu-andreevna">github.com/eu-andreevna</a>
+                            </li>
+                            <li class="contacts-item">
+                                 Евгения#5567
+                            </li>
+                            <li class="contacts-item">
+                                <a class="link" href="https://t.me/eu_andreevna">@eu_andreevna</a>
+                            </li>
+                        </ul>
                     </section>
                     <section class="section" id="summary">
                         <h2 class="section-title">About me</h2>
-                        <p class="text-about">I am 21 years old and a fourth-year student. I am studying in the IT direction. I want to become a frontend developer
-                        and strive for it.</p>
+                        <p class="text-about">I am 21 years old and I am a fourth-year student. I am studying in the IT direction. I want to become a front-end
+                        developer and strive for it. <br><br>
+                        I liked programming in the tenth grade of school. And not so long ago I realized that I like frontend development,
+                        because you immediately see the result of your work. It's interesting and exciting.<br><br>
+                         I took free marathons and courses on
+                        the Internet in HTML, CSS, JS and now I want to study more seriously and in a structured way.</p>
                     </section>
                     <section class="section" id="code">
                         <h2 class="section-title">Code example</h2>
-                        <pre>
-                            <code>
-                                schemeSvg.addEventListener('click', (event) => {
-                                    if (!event.target.classList.contains('booked')){
-                                        event.target.classList.toggle('active');
-                                        let totalSeats = schemeSvg.querySelectorAll('.active').length;
-                                        totalPrice = totalSeats * cost;
-                                        totalPriceTag.textContent = totalPrice;
-                                    }
-                                });
-                            </code>
-                        </pre>
+<pre class="pre-code">
+<code>
+    function factorial(n) {
+        if(n &lt; 0) return null;
+        if (n &lt;=1) return 1;
+        return n * factorial(n-1);
+    }
+</code>
+</pre>
                     </section>
                     <section class="section" id="education">
                         <h2 class="section-title">Education</h2>
@@ -71,17 +92,6 @@
                             <li class="section-item">Russian: Native</li>
                         </ul>
                     </section>
-                <!-- </div> -->
-                <!-- <div class="column right-column"> -->
-                    <section class="section" id="contacts">
-                        <h2 class="section-title">Contacts</h2>
-                        <ul class="list">
-                            <li class="section-item"><div>Phone:</div> <p>+7 (977) 540-56-49</p></li>
-                            <li class="section-item"><div>E-mail:</div> <a class="link" href="mailto:eu.mamarina2014@yandex.ru">eu.mamarina2014@yandex.ru</a></li>
-                            <li class="section-item"><div>GitHub:</div> <a class="link" href="https://github.com/eu-andreevna">github.com/eu-andreevna</a></li>
-                            <li class="section-item"><div>Discord:</div> <p>Евгения (@eu-andreevna)</p></li>
-                        </ul>
-                    </section>
                     <section class="section" id="skills">
                         <h2 class="section-title">Skills</h2>
                         <ul class="list">
@@ -93,18 +103,16 @@
                             <li class="section-item">SASS</li>
                         </ul>
                     </section>
-                <!-- </div> -->
             </div>
         </main>
         <footer class="footer">
             <div class="container">
-                <ul class="list footer-contacts">
-                    <li><a class="link" href="https://github.com/eu-andreevna"><img src="asset/svg/code_development_github_open_source_programming_source_icon_123274.svg" alt="icon-github" width="20" height="20"></a></li>
+                <ul class="list footer-list">
+                    <li><a class="link" href="https://github.com/eu-andreevna"><img src="asset/svg/github.svg" alt="icon-github" width="50" height="50"></a></li>
                     <li><p>2021</p></li>
-                    <li><a class="link" href="https://rs.school/js/"><img src="asset/svg/rs_school_js.svg" alt="icon-rsschool" width="60" height="40"></a></li>
+                    <li><a class="link" href="https://rs.school/js/"><img src="asset/svg/rs_school_js.svg" alt="icon-rsschool" width="100" height="60"></a></li>
                 </ul>
             </div>
         </footer>
-    <!-- </div> -->
 </body>
 </html>
